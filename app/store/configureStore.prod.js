@@ -1,25 +1,32 @@
 // @flow
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { createBrowserHistory } from 'history';
 import { routerMiddleware } from 'react-router-redux';
 import rootReducer from '../reducers';
-import { localStorage } from 'react';
-import {
-  persistStore,
-  autoRehydrate,
-} from 'redux-persist';
-
-const persistBlacklist = ["token", "router"];
+const storage = require('electron-json-storage');
 
 const history = createBrowserHistory();
 const router = routerMiddleware(history);
-const enhancer = compose(applyMiddleware(thunk, router), autoRehydrate());
+const enhancer = applyMiddleware(thunk, router);
 
-function configureStore(callback: () => {}) {
-  let store = createStore(rootReducer, {}, enhancer);
-  persistStore(store, { storage: localStorage, blacklist: persistBlacklist }, callback);
-  return store;
+function _configureStore(initialState, callback) {
+  let store = createStore(rootReducer, initialState, enhancer);
+  callback(store);
 }
+
+function loadInitialState(callback) {
+  storage.getMany(['config', 'user'], function (error, data) {
+    if (error) { console.log(error) };
+    if (data) {
+      _configureStore(data, callback);
+    }
+  });
+}
+
+function configureStore(callback) {
+  loadInitialState(callback);
+}
+
 
 export default { configureStore, history };

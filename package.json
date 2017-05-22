@@ -1,8 +1,7 @@
 {
-  "name": "electron-react-boilerplate",
-  "productName": "ElectronReact",
+  "name": "aws-session-token-gui",
+  "productName": "aws-session-token-gui",
   "version": "0.12.0",
-  "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
   "scripts": {
     "test": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 node --trace-warnings ./test/runTests.js",
     "test-all": "npm run lint && npm run flow && npm run test && npm run build && npm run test-e2e",
@@ -31,8 +30,8 @@
   },
   "browserslist": "electron 1.6",
   "build": {
-    "productName": "ElectronReact",
-    "appId": "org.develar.ElectronReact",
+    "productName": "aws-session-token-gui",
+    "appId": "de.innFactory.aws-session-token-gui",
     "files": [
       "dist/",
       "node_modules/",
@@ -42,6 +41,7 @@
       "package.json"
     ],
     "dmg": {
+      "icon": "resources/icon.icns",
       "contents": [
         {
           "x": 130,
@@ -56,11 +56,13 @@
       ]
     },
     "win": {
+      "icon": "resources/icon.ico",
       "target": [
         "nsis"
       ]
     },
     "linux": {
+      "icon": "resources/icons",
       "target": [
         "deb",
         "AppImage"
@@ -189,6 +191,7 @@
     "amazon-cognito-identity-js": "^1.18.0",
     "aws-sdk": "^2.54.0",
     "electron-debug": "^1.1.0",
+    "electron-json-storage": "^3.0.5",
     "font-awesome": "^4.7.0",
     "history": "^4.6.1",
     "localforage": "^1.5.0",
@@ -203,7 +206,6 @@
     "react-tap-event-plugin": "^2.0.1",
     "redux": "^3.6.0",
     "redux-electron-store": "^0.4.1",
-    "redux-persist": "^4.8.0",
     "redux-thunk": "^2.2.0",
     "reflexbox": "^2.2.3",
     "source-map-support": "^0.4.15"

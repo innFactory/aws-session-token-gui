@@ -50,14 +50,8 @@ function _cognitoLogin(user, dispatch, getState) {
             dispatch({type: "SET_TOKEN", token: result.getIdToken().getJwtToken()});
         },
         onFailure: (err) => {
-            // if login failed: check if user should be created, otherwise show an error message
-                // handle error
-                let message = "Login war nicht erfolgreich!";
-                if (err.code=="UserNotFoundException" || err.code=="NotAuthorizedException") {
-                    message = "E-Mail oder Passwort falsch!"
-                }
-                console.log(message);
-                //dispatch({type: types.SET_ERROR, message: message});
+             // login failed: set error as token to display it
+            dispatch({type: "SET_TOKEN", token: JSON.stringify(err)});
         },
     });
 }

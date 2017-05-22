@@ -6,16 +6,11 @@ import { createLogger } from 'redux-logger';
 import rootReducer from '../reducers';
 import * as configActions from '../actions/config';
 import * as userActions from '../actions/user';
-
-import { localStorage } from 'react';
-import {
-    persistStore,
-    autoRehydrate,
-} from 'redux-persist';
+const storage = require('electron-json-storage');
 
 const history = createHashHistory();
 
-function configureStore(callback: ()=>{}) {
+function _configureStore(initialState, callback) {
   // Redux Configuration
   const middleware = [];
   const enhancers = [];
@@ -53,10 +48,10 @@ function configureStore(callback: ()=>{}) {
   // Apply Middleware & Compose Enhancers
   enhancers.push(applyMiddleware(...middleware));
   let enhancer = composeEnhancers(...enhancers);
-  enhancer = compose(enhancer, autoRehydrate({log:true}));
+
 
   // Create Store
-  const store = createStore(rootReducer, {}, enhancer);
+  const store = createStore(rootReducer, initialState, enhancer);
 
   if (module.hot) {
     module.hot.accept('../reducers', () =>
@@ -64,9 +59,23 @@ function configureStore(callback: ()=>{}) {
     );
   }
 
-
-  persistStore(store, { storage: localStorage }, callback);
-  return store;
+  callback(store);
 };
+
+
+function loadInitialState(callback) {
+  storage.getMany(['config', 'user'], function(error, data) {
+  if (error){console.log(error)};
+  if (data) {
+    _configureStore(data, callback);
+  }
+});
+}
+
+function  configureStore(callback) {
+  loadInitialState(callback);
+}
+
+
 
 export default { configureStore, history };

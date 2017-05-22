@@ -70,7 +70,7 @@ export default class Home extends Component {
 
           <Flex p={2} ml={2} flexColumn={false}>
             <Flex p={2} ml={2} flexColumn>
-              <Box col={12}>
+              <Box col={6}>
                 <TextField
                   value={this.state.userPoolId}
                   floatingLabelText="User Pool ID"
@@ -97,18 +97,18 @@ export default class Home extends Component {
                   onChange={(e, text) => { this.setState({ password: text }) }}
                 />
                 <Toggle
-                  label="Remember Password (unsave)"
+                  label="Remember Password (unsafe)"
                   defaultToggled={this.state.rememberPassword}
                   onToggle={(e, bool) => { this.setState({ rememberPassword: bool }) }}
                   labelStyle={{ fontSize: 13, color: "darkgrey" }}
-                  style={{ maxWidth: 256 }}
+                  style={{ minWidth: 256, maxWidth: 256 }}
                 />
               </Box>
               <Box col={6} mt={2}>
                 <RaisedButton label="Get Token" secondary onClick={this._onGetToken.bind(this)} />
               </Box>
             </Flex>
-            <Box col={6}>
+            <Box col={7}>
               <div>
                 {this.props.token}
               </div>
