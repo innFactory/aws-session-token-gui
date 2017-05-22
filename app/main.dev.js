@@ -81,7 +81,10 @@ app.on('ready', async () => {
     mainWindow = null;
   });
 
-  if (platform !== "darwin") {
+  if (platform === "darwin") {
+    const menuBuilder = new MenuBuilder(mainWindow);
+    menuBuilder.buildMenu();
+  } else {
     mainWindow.setMenu(null);
   }
 
