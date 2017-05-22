@@ -81,6 +81,8 @@ app.on('ready', async () => {
     mainWindow = null;
   });
 
-  mainWindow.setMenu(null);
+  if (platform !== "darwin") {
+    mainWindow.setMenu(null);
+  }
 
 });
