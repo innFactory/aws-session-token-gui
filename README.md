@@ -29,6 +29,8 @@ $ npm run package
 <br />
 <br />
 
+## Architecture
+<img src="architecture.PNG" width="90%">
 
 ## Dependencies
 
