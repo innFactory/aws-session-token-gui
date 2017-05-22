@@ -30,7 +30,7 @@ $ npm run package
 <br />
 
 ## Architecture
-<img src="architecture.PNG" width="90%">
+<img src="architecture.png" width="80%">
 
 ## Dependencies
 
