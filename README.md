@@ -1,6 +1,14 @@
 # Get a Amazon Web Service Token via GUI
 A small proof of concept with React, Electron and AWS-SDK. 
 
+<img src="screenshot.PNG" width="90%">
+
+
+<br />
+<br />
+
+
+
 ## Install & Packaging
 Clone project:
 ```
@@ -17,6 +25,9 @@ Package the app for your local platform:
 ```
 $ npm run package
 ```
+
+<br />
+<br />
 
 
 ## Dependencies
