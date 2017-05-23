@@ -1,8 +1,8 @@
 # Get a Amazon Web Service Token via GUI
 A small proof of concept with React, Electron and AWS-SDK. 
+More Infos in our German Blog - [innFactory.de/blog](https://innfactory.de/blog/52-javascript-desktop-app-electron)
 
 <img src="screenshot.PNG" width="90%">
-
 
 <br />
 <br />
