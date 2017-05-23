@@ -7,6 +7,7 @@ type actionType = {
   data: any,
 };
 
+// user reducer
 export default function user(state: any = {}, action: actionType) {
   switch (action.type) {
     case SET_USER:
