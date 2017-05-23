@@ -7,9 +7,14 @@ More Infos in German - [innFactory.de/blog](https://innfactory.de/blog/52-javasc
 <br />
 <br />
 
+## Install
+Download the binary `.dmg` for Mac or `.exe` for Windows: <br/>
+[download from bin folder](https://github.com/innFactory/aws-session-token-gui/tree/master/bin)
 
+<br />
+<br />
 
-## Install & Packaging
+## Build & Packaging
 Clone project:
 ```
 $ git clone https://github.com/innFactory/aws-session-token-gui.git
