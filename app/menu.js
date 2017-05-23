@@ -1,6 +1,6 @@
 // @flow
 import { app, Menu, shell, BrowserWindow } from 'electron';
-import MenuBuilder from './menu';
+
 
 export default class MenuBuilder {
   mainWindow: BrowserWindow;
@@ -46,7 +46,7 @@ export default class MenuBuilder {
 
   buildDarwinTemplate() {
     const subMenuAbout = {
-      label: 'Electron',
+      label: 'aws-session-token-gui',
       submenu: [
         { label: 'About ElectronReact', selector: 'orderFrontStandardAboutPanel:' },
         { type: 'separator' },
