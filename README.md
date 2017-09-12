@@ -9,7 +9,8 @@ More Infos in German - [innFactory.de/blog](https://innfactory.de/blog/52-javasc
 
 ## Install
 Download the binary `.dmg` for Mac or `.exe` for Windows: <br/>
-[download from bin folder](https://github.com/innFactory/aws-session-token-gui/tree/master/bin)
+[download for mac from innFactory](https://innfactory.de/dl/aws-session-token-gui-1.0.0.dmg)
+[download for windows from innFactory](https://innfactory.de/dl/aws-session-token-gui Setup 1.0.0.exe)
 
 <br />
 <br />
