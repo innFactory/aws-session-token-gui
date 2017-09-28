@@ -1,6 +1,6 @@
 {
-  "name": "aws-session-token-gui",
-  "productName": "aws-session-token-gui",
+  "name": "aws-access-token-gui",
+  "productName": "aws-access-token-gui",
   "version": "0.12.0",
   "scripts": {
     "test": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 node --trace-warnings ./test/runTests.js",
@@ -30,8 +30,8 @@
   },
   "browserslist": "electron 1.6",
   "build": {
-    "productName": "aws-session-token-gui",
-    "appId": "de.innFactory.aws-session-token-gui",
+    "productName": "aws-access-token-gui",
+    "appId": "de.innFactory.aws-access-token-gui",
     "files": [
       "dist/",
       "node_modules/",
