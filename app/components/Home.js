@@ -50,7 +50,7 @@ export default class Home extends Component {
     return (
       <div>
         <AppBar
-          title="Get AWS Session Token"
+          title="Get AWS Access Token"
           iconElementLeft={<div></div>}
           iconElementRight={(
             <IconMenu
