@@ -47,7 +47,7 @@ function _cognitoLogin(user, dispatch, getState) {
     cognitoUser.authenticateUser(authenticationDetails, {
         onSuccess: (result) => {
             // login was successful: store aws idToken to state
-            dispatch({type: "SET_TOKEN", token: result.getIdToken().getJwtToken()});
+            dispatch({type: "SET_TOKEN", token: result.getAccessToken().getJwtToken()});
         },
         onFailure: (err) => {
              // login failed: set error as token to display it
