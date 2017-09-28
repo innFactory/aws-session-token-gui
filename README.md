@@ -1,7 +1,7 @@
-# Changes to origin
+## Changes to origin
 - Get access-token from aws not id-token (forked from **innFactory**)
 
-# Let's get started
+## Let's get started
 1. ``npm install`` (install dependencies)
 2. ``npm start`` (run project on your device)
 3. ``npm run build`` (build project - see ``./release/``)
