@@ -15,17 +15,6 @@ More Infos in German - [innFactory.de/blog](https://innfactory.de/blog/52-javasc
 <br />
 <br />
 
-## Install
-Download the binary `.dmg` for Mac or `.exe` for Windows: 
-* [download for mac from innFactory](https://innfactory.de/dl/aws-session-token-gui-1.0.0.dmg)
-* [download for windows from innFactory](https://innfactory.de/dl/aws-session-token-guiSetup1.0.0.exe)
-
-## Build & Packaging
-Clone project:
-```
-$ git clone https://github.com/innFactory/aws-session-token-gui.git
-```
-
 Install dependencies:
 ```
 $ cd aws-access-token-gui
@@ -67,4 +56,3 @@ https://github.com/jviotti/electron-json-storage
 
 aws-sdk-js<br />
 https://github.com/aws/aws-sdk-js
-
