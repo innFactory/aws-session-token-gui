@@ -4,7 +4,7 @@
 # Let's get started
 1. `npm install` (install dependencies)
 2. `npm start` (run project on your device)
-3. `npm run build (build project - see `./release/`)
+3. `npm run build (build project - see ``./release/``)
 
 # Get a Amazon Web Service Token via GUI
 A small proof of concept with React, Electron and AWS-SDK. 
