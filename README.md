@@ -1,3 +1,11 @@
+# Changes to origin
+- Get access token from aws not id token (forked from **innFactory**)
+
+# Let's get started
+1. `npm install` (install dependencies)
+2. `npm start` (run project on your device)
+3. `npm run build (build project - see `./release/`)
+
 # Get a Amazon Web Service Token via GUI
 A small proof of concept with React, Electron and AWS-SDK. 
 More Infos in German - [innFactory.de/blog](https://innfactory.de/blog/52-javascript-desktop-app-electron)
