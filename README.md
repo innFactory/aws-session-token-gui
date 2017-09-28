@@ -28,7 +28,7 @@ $ git clone https://github.com/innFactory/aws-session-token-gui.git
 
 Install dependencies:
 ```
-$ cd aws-session-token-gui
+$ cd aws-access-token-gui
 $ npm install
 ```
 

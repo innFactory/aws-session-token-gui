@@ -46,7 +46,7 @@ export default class MenuBuilder {
 
   buildDarwinTemplate() {
     const subMenuAbout = {
-      label: 'aws-session-token-gui',
+      label: 'aws-access-token-gui',
       submenu: [
         { label: 'About ElectronReact', selector: 'orderFrontStandardAboutPanel:' },
         { type: 'separator' },
