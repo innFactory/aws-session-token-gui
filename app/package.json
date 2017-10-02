@@ -1,6 +1,6 @@
 {
-  "name": "aws-session-token-gui",
-  "productName": "aws-session-token-gui",
+  "name": "aws-access-token-gui",
+  "productName": "aws-access-token-gui",
   "version": "1.0.0",
   "description": "A desktop app for fetching a aws token.",
   "main": "./main.prod.js",
