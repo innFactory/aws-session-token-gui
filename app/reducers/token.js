@@ -5,9 +5,18 @@ type actionType = {
   token: any
 };
 
-export default function token(state: string = "", action: actionType) {
+export function accessToken(state: string = "", action: actionType) {
   switch (action.type) {
-    case "SET_TOKEN":
+    case "SET_ACCESS_TOKEN":
+      return action.token;
+    default:
+      return state;
+  }
+}
+
+export function idToken(state: string = "", action: actionType) {
+  switch (action.type) {
+    case "SET_ID_TOKEN":
       return action.token;
     default:
       return state;

@@ -27,7 +27,8 @@ export default class Home extends Component {
   props: {
     cognitoLogin: () => void,
     setConfig: () => void,
-    token: string,
+    idToken: string,
+    accessToken: string,
     user: any,
     config: any,
   };
@@ -42,6 +43,7 @@ export default class Home extends Component {
       userName: props.user.userName,
       password: props.user.password,
       rememberPassword: props.user.rememberPassword,
+      toggleAccessToken: props.config.toggleAccessToken
     };
   }
 
@@ -103,14 +105,22 @@ export default class Home extends Component {
                   labelStyle={{ fontSize: 13, color: "darkgrey" }}
                   style={{ minWidth: 256, maxWidth: 256 }}
                 />
+                <Toggle
+                  label="Get access token instead of id token"
+                  defaultToggled={this.state.toggleAccessToken}
+                  onToggle={(e, bool) => { this.setState({ toggleAccessToken: bool }) }}
+                  labelStyle={{ fontSize: 13, color: "darkgrey" }}
+                  style={{ minWidth: 256, maxWidth: 256 }}
+                />
               </Box>
               <Box col={6} mt={2}>
                 <RaisedButton label="Get Token" secondary onClick={this._onGetToken.bind(this)} />
+              
               </Box>
             </Flex>
             <Box col={7}>
               <div>
-                {this.props.token}
+                {this.state.toggleAccessToken? this.props.accessToken:this.props.idToken}
               </div>
             </Box>
           </Flex>
