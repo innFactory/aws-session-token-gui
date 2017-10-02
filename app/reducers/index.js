@@ -2,12 +2,13 @@
 import { combineReducers } from 'redux';
 import { routerReducer as router } from 'react-router-redux';
 import config from './config';
-import token from './token';
+import {idToken, accessToken} from './token';
 import user from './user';
 
 const rootReducer = combineReducers({
   config,
-  token,
+  idToken,
+  accessToken,
   user,
   router,
 });

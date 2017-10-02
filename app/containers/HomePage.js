@@ -11,9 +11,7 @@ import * as ConfigActions from '../actions/config';
 
 function mapStateToProps(state) {
   return {
-    token: state.token,
-    user: state.user,
-    config: state.config,
+    ...state
   };
 }
 

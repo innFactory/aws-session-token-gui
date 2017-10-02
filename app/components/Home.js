@@ -27,8 +27,8 @@ export default class Home extends Component {
   props: {
     cognitoLogin: () => void,
     setConfig: () => void,
-    idToken: string,
-    accessToken: string,
+    idToken: any,
+    accessToken: any,
     user: any,
     config: any,
   };
@@ -36,14 +36,13 @@ export default class Home extends Component {
   constructor(props) {
     super();
 
-
     this.state = {
       userPoolId: props.config.userPoolId,
       clientId: props.config.clientId,
       userName: props.user.userName,
       password: props.user.password,
       rememberPassword: props.user.rememberPassword,
-      toggleAccessToken: props.config.toggleAccessToken
+      toggleAccessToken: false
     };
   }
 
@@ -115,12 +114,12 @@ export default class Home extends Component {
               </Box>
               <Box col={6} mt={2}>
                 <RaisedButton label="Get Token" secondary onClick={this._onGetToken.bind(this)} />
-              
+
               </Box>
             </Flex>
             <Box col={7}>
               <div>
-                {this.state.toggleAccessToken? this.props.accessToken:this.props.idToken}
+                {this.state.toggleAccessToken ? this.props.accessToken : this.props.idToken}
               </div>
             </Box>
           </Flex>

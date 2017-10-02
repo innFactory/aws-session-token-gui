@@ -52,7 +52,8 @@ function _cognitoLogin(user, dispatch, getState) {
         },
         onFailure: (err) => {
              // login failed: set error as token to display it
-            dispatch({type: "SET_TOKEN", token: JSON.stringify(err)});
+          dispatch({type: "SET_ID_TOKEN", token: JSON.stringify(err)});
+          dispatch({type: "SET_ACCESS_TOKEN",token: JSON.stringify(err)});
         },
     });
 }
